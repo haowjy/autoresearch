@@ -19,7 +19,7 @@ model-policies:
     override: {effort: high}
 subagents: [design-lead, explorer, web-researcher, source-researcher, prober, reviewer]
 skills:
-  load: [autoresearch, grill-with-evidence, intent-modeling, llm-writing]
+  load: [autoresearch, goal-writing, grill-with-evidence, intent-modeling, llm-writing]
   available: [session-mining]
 tools:
   bash: allow

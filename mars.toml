@@ -5,7 +5,7 @@ description = "Agents and skills for coordinating AI research loops: evidence-gr
 
 [dependencies.meridian-base]
 url = "https://github.com/haowjy/meridian-base"
-version = ">=0.7.0, <0.8.0"
+version = ">=0.7.34, <0.8.0"
 
 [dependencies.meridian-dev-workflow]
 url = "https://github.com/haowjy/meridian-dev-workflow"

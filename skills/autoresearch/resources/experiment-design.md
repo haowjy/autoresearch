@@ -2,7 +2,9 @@
 
 Use this loop state when the next investigation needs design before execution.
 Designing is recurring; reopen it after surprising results, failed gates, new
-evidence, or human correction.
+evidence, or human correction. Use `/goal-writing` to define the optimization
+target, evidence, anti-goals, and reviewer gates before the design becomes a
+run.
 
 ## Direct Brief vs Design Lead
 

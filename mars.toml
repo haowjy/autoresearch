@@ -1,7 +1,7 @@
 [package]
 name = "autoresearch"
 version = "0.1.0"
-description = "Agents and skills for coordinating AI research loops: research dialogue, experiment design, run supervision, result triage, and durable research artifacts."
+description = "Agents and skills for coordinating AI research loops: evidence-grounded dialogue, experiment design, run supervision, result triage, and durable research memory."
 
 [dependencies.meridian-base]
 url = "https://github.com/haowjy/meridian-base"

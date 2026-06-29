@@ -2,18 +2,18 @@
 name: autoresearch
 type: reference
 description: >
-  Load when coordinating an AI research loop: walking the research tree with a
-  human, designing the next investigation, supervising runs, reconvening on
-  results, and maintaining durable research artifacts.
+  Load when coordinating an AI research loop: grounding research dialogue in
+  evidence, designing the next investigation, supervising runs, reconvening on
+  results, and maintaining durable research memory.
 model-invocable: true
 ---
 
 # Autoresearch
 
-Use this skill to run AI research as a disciplined loop. Own the research frame,
-conversation state, experiment design handoffs, interpretation, artifact hygiene,
-and next-step decision. Delegate heavyweight design and execution to the right
-Meridian specialists.
+Use this skill to coordinate AI research as a disciplined loop. Own the
+research frame, conversation state, experiment-design handoffs, interpretation,
+artifact hygiene, and next-step decision. Delegate heavyweight design and
+execution to the right Meridian specialists.
 
 This package is ecosystem-native: reuse `meridian-dev-workflow` rather than
 recreating its design, review, source-study, probing, and implementation
@@ -28,7 +28,7 @@ task needs procedural detail:
 
 | State | Load | Use when |
 |---|---|---|
-| Research dialogue | `resources/research-dialogue.md` | Evidence-grounded walking of the human through the research tree, pre-hypothesis framing, constraints, and uncertainty |
+| Research dialogue | `resources/research-dialogue.md` | Grounding the research tree in evidence: pre-hypothesis framing, constraints, and uncertainty |
 | Experiment design | `resources/experiment-design.md` | Turning a branch into a stage brief, deciding whether to spawn `@design-lead`, comparing alternatives |
 | Run supervision | `resources/run-supervision.md` | Monitoring or coordinating an active run without taking over implementation |
 | Reconvene, record, decide | `resources/reconvene-record-decide.md` | Interpreting outputs, updating artifacts, promoting decisions, and choosing the next loop move |
@@ -48,10 +48,10 @@ Every loop should preserve the Karpathy-style autoresearch discipline:
 - keep, discard, or branch based on evidence,
 - log enough provenance that future loops can learn from the attempt.
 
-When the work is wet-lab-adjacent or pre-hypothesis, the verification signal may
-be a design review, literature constraint, assay feasibility check, or decision
-artifact rather than a benchmark number. Do not pretend subjective confidence is
-a metric; name the evidence type honestly.
+When the work is wet-lab-adjacent or still pre-hypothesis, the verification
+signal may be a design review, literature constraint, assay feasibility check,
+or decision artifact rather than a benchmark number. Do not treat subjective
+confidence as a metric; name the evidence type honestly.
 
 ## Artifact Layers
 

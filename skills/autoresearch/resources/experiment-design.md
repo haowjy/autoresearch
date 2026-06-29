@@ -1,13 +1,13 @@
 # Experiment Design
 
-Use this loop state whenever the next investigation needs to be shaped before it
-runs. Designing is recurring; reopen it after surprising results, failed gates,
-new evidence, or human correction.
+Use this loop state when the next investigation needs design before execution.
+Designing is recurring; reopen it after surprising results, failed gates, new
+evidence, or human correction.
 
 ## Direct Brief vs Design Lead
 
-Write the stage brief directly only when the design is obvious, low-risk, and
-has one credible path.
+Write the stage brief directly only when the design is low-risk and has one
+credible path.
 
 Spawn `@design-lead` when the next experiment has nontrivial alternatives,
 unclear boundaries, meaningful cost, feasibility risk, data/benchmark choices,

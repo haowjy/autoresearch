@@ -1,8 +1,8 @@
 # Reconvene, Record, Decide
 
 Use this loop state when a run finishes, fails, or produces a surprising
-observation. The goal is to interpret evidence, update memory, and choose the
-next loop move.
+observation. Interpret the evidence, update research memory, and choose the next
+loop move.
 
 ## Classify the Result
 

@@ -3,10 +3,9 @@
 Use this loop state when the next investigation needs design before execution.
 Designing is recurring; reopen it after surprising results, failed gates, new
 evidence, or human correction. Use `/goal-writing` to define the optimization
-target, evidence, anti-goals, and reviewer gates. Before a runner handoff,
-write the normal handoff separately from a fenced `Goal to paste` block. The
-user must paste or edit that goal block before the design becomes an execution
-contract.
+target, evidence, anti-goals, and reviewer gates. Before execution, write the
+runner handoff separately from a fenced `Goal to paste` block. The user must
+paste or edit that goal block before the design becomes an execution contract.
 
 ## Direct Brief vs Design Lead
 

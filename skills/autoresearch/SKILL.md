@@ -73,11 +73,12 @@ every run without forcing full logs into human-facing summaries.
 Managers and leads coordinate. They should not silently become the experiment
 implementation worker unless the user explicitly asks for direct execution.
 
-Before handing execution to a runner, require a user-provided or user-approved
-goal. At the execution boundary, produce a normal runner handoff plus a separate
-fenced `Goal to paste` block, and tell the user to paste the goal back unchanged
-or edited. Use the pasted goal as the approved execution contract. Do not rely on a
-paraphrase. When handing work to another agent or runner, include the loop state,
-research question, approved goal, hypothesis or design branch, stage gate, exact
-files to read, expected command or entrypoint if known, output location,
-anti-goals, evidence of success, and what summary should come back.
+Before handing execution to a runner, produce two separate blocks: a runner
+handoff and a fenced `Goal to paste`. Tell the user to paste the goal back
+unchanged or edited. Use the pasted goal as the execution contract; do not rely
+on a paraphrase.
+
+The runner handoff should include the loop state, research question, hypothesis
+or design branch, stage gate, exact files to read, expected command or entrypoint
+if known, output location, anti-goals, evidence of success, and what summary
+should come back.

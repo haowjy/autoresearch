@@ -4,7 +4,7 @@ Format: Keep a Changelog. Versioning: SemVer.
 
 ## [Unreleased]
 
-- Require execution handoffs to present a normal runner handoff plus a separate user-pasteable goal block.
+- Require execution handoffs to include a runner handoff plus a separate user-pasteable goal block.
 - Add `autoresearch-runner` execution subagent and require a user-approved goal before execution handoff.
 - Require `meridian-base` v0.7.34+ and load `/goal-writing` so autoresearch goals include evidence, anti-goals, stop conditions, and reviewer gates.
 - Pivoted package framing toward AI researchers and the Meridian ecosystem.

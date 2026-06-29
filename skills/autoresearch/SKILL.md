@@ -28,7 +28,7 @@ task needs procedural detail:
 
 | State | Load | Use when |
 |---|---|---|
-| Research dialogue | `resources/research-dialogue.md` | Grounding the research tree in evidence: pre-hypothesis framing, constraints, and uncertainty |
+| Research dialogue | `resources/research-dialogue.md` | Lead-owned user interaction: evidence-grounded design-tree walk for requirements, scope, constraints, and uncertainty |
 | Experiment design | `resources/experiment-design.md` | Turning a branch into a stage brief, deciding whether to spawn `@design-lead`, comparing alternatives |
 | Run supervision | `resources/run-supervision.md` | Monitoring or coordinating an active run without taking over implementation |
 | Reconvene, record, decide | `resources/reconvene-record-decide.md` | Interpreting outputs, updating artifacts, promoting decisions, and choosing the next loop move |

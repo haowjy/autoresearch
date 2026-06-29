@@ -1,7 +1,7 @@
 # Run Supervision
 
-Use this loop state while a run is active or when supervising a runner. The goal
-is to protect interpretability without hijacking execution.
+Use this loop state while `@autoresearch-runner` or another project runner is
+active. The goal is to protect interpretability without hijacking execution.
 
 ## Stay at Coordination Altitude
 

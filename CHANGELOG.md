@@ -4,6 +4,7 @@ Format: Keep a Changelog. Versioning: SemVer.
 
 ## [Unreleased]
 
+- Add `autoresearch-runner` execution subagent and require a user-approved goal before execution handoff.
 - Require `meridian-base` v0.7.34+ and load `/goal-writing` so autoresearch goals include evidence, anti-goals, stop conditions, and reviewer gates.
 - Pivoted package framing toward AI researchers and the Meridian ecosystem.
 - Added `meridian-dev-workflow` dependency so `autoresearch-lead` can delegate nontrivial experiment design to `@design-lead`.

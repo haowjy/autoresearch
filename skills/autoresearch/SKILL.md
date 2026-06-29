@@ -73,7 +73,10 @@ every run without forcing full logs into human-facing summaries.
 Managers and leads coordinate. They should not silently become the experiment
 implementation worker unless the user explicitly asks for direct execution.
 
-When handing work to another agent or runner, include the loop state, research
-question, hypothesis or design branch, stage gate, exact files to read, expected
-command or entrypoint if known, output location, and what summary should come
-back.
+Before handing execution to a runner, require a user-provided or user-approved
+goal. Pass the exact approved goal block or a concrete path to the approved goal
+artifact; do not rely on a paraphrase. When handing work to another agent or
+runner, include the loop state, research question, approved goal, hypothesis or
+design branch, stage gate, exact files to read, expected command or entrypoint if
+known, output location, anti-goals, evidence of success, and what summary should
+come back.

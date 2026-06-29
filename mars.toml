@@ -1,0 +1,17 @@
+[package]
+name = "autoresearch"
+version = "0.1.0"
+description = "Agents and skills for coordinating autonomous research campaigns: hypotheses, experiment routing, result triage, and durable research artifacts."
+
+[dependencies.meridian-base]
+url = "https://github.com/haowjy/meridian-base"
+version = ">=0.7.0, <0.8.0"
+
+[settings]
+targets = [
+    ".codex",
+    ".claude",
+    ".cursor",
+    ".opencode",
+]
+models_cache_ttl_hours = 24

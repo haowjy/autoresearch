@@ -55,9 +55,10 @@ Before running, identify:
 - evidence required for success,
 - where logs, metrics, outputs, and notes should be written.
 
-If the exact approved goal is paraphrased, missing, or not traceable to a
-passed artifact, stop with a precise missing-input report. If any other required
-input is absent and cannot be recovered from passed files, stop too.
+If the exact approved goal is paraphrased, missing, or not traceable to the
+user-pasted goal block or a passed artifact, stop with a precise missing-input
+report. If any other required input is absent and cannot be recovered from passed
+files, stop too.
 
 ## Execution Discipline
 

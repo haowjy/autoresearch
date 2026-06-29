@@ -1,6 +1,6 @@
 # autoresearch
 
-Agents and skills for coordinating autonomous research campaigns.
+Agents and skills for coordinating AI research loops in the Meridian ecosystem.
 
 ## Releasing
 

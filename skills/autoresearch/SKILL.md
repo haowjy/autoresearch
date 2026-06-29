@@ -2,29 +2,56 @@
 name: autoresearch
 type: reference
 description: >
-  Load when coordinating an autonomous research campaign: framing hypotheses,
-  planning experiments, routing execution, triaging results, and maintaining
-  research artifacts across work logs, machine run indexes, and durable KB.
+  Load when coordinating an AI research loop: walking the research tree with a
+  human, designing the next investigation, supervising runs, reconvening on
+  results, and maintaining durable research artifacts.
 model-invocable: true
 ---
 
 # Autoresearch
 
-Use this skill to run research as a disciplined campaign loop. Own the framing,
-state, interpretation, and next-step decisions. Delegate implementation and long
-runs to project-specific runners or workers.
+Use this skill to run AI research as a disciplined loop. Own the research frame,
+conversation state, experiment design handoffs, interpretation, artifact hygiene,
+and next-step decision. Delegate heavyweight design and execution to the right
+Meridian specialists.
 
-## Operating Frame
+This package is ecosystem-native: reuse `meridian-dev-workflow` rather than
+recreating its design, review, source-study, probing, and implementation
+machinery.
 
-Start by making the research question explicit:
+## Loop States
 
-- What hypothesis is being tested?
-- What observation would change the plan?
-- What metric, gate, or qualitative signal decides whether the result matters?
-- What artifact will preserve the decision after the run?
+Autoresearch is not a linear pipeline. Designing can reopen after any result,
+surprise, failed run, literature finding, or human correction. Before acting,
+identify the current loop state and load one or more matching resources when the
+task needs procedural detail:
 
-Do not spend compute until the hypothesis, setup, and success signal are clear
-enough that another agent could run the experiment without reinterpreting intent.
+| State | Load | Use when |
+|---|---|---|
+| Research dialogue | `resources/research-dialogue.md` | Evidence-grounded walking of the human through the research tree, pre-hypothesis framing, constraints, and uncertainty |
+| Experiment design | `resources/experiment-design.md` | Turning a branch into a stage brief, deciding whether to spawn `@design-lead`, comparing alternatives |
+| Run supervision | `resources/run-supervision.md` | Monitoring or coordinating an active run without taking over implementation |
+| Reconvene, record, decide | `resources/reconvene-record-decide.md` | Interpreting outputs, updating artifacts, promoting decisions, and choosing the next loop move |
+
+If the user asks broadly, start with research dialogue unless a concrete result
+or active run is already in hand.
+
+## Core Autoresearch Invariant
+
+Every loop should preserve the Karpathy-style autoresearch discipline:
+
+- define a measurable goal or observation,
+- use real data or real artifacts when the domain allows it,
+- capture a baseline before claiming improvement,
+- change one meaningful thing at a time,
+- verify mechanically where possible,
+- keep, discard, or branch based on evidence,
+- log enough provenance that future loops can learn from the attempt.
+
+When the work is wet-lab-adjacent or pre-hypothesis, the verification signal may
+be a design review, literature constraint, assay feasibility check, or decision
+artifact rather than a benchmark number. Do not pretend subjective confidence is
+a metric; name the evidence type honestly.
 
 ## Artifact Layers
 
@@ -34,74 +61,19 @@ names; do not hardcode package-specific paths unless the project provides them.
 | Layer | Purpose | Contents |
 |---|---|---|
 | Program index | Cross-campaign state | Best official results, active campaigns, stage snapshots, durable pointers |
-| Campaign narrative | Human interpretation | Hypotheses, setups, results, surprises, next experiment IDs |
+| Campaign narrative | Human interpretation | Hypotheses, designs, setups, results, surprises, next experiment IDs |
 | Machine run ledger | Exhaustive run record | Run IDs, configs, metrics, logs, output directories |
 
 Keep these layers distinct. The program index is compact and curated. The
 campaign narrative explains why the result matters. The machine ledger preserves
 every run without forcing full logs into human-facing summaries.
 
-## Campaign Loop
-
-1. **Frame.** Convert the user's goal into one or more testable hypotheses.
-2. **Stage.** Define the next gate: expected setup, metric, pass/fail criteria,
-   and what will happen after each outcome.
-3. **Route.** Hand execution to the right project-specific runner. Pass concrete
-   files and exact success criteria; avoid broad context dumps.
-4. **Triage.** Separate infrastructure failures, calibration-only runs, official
-   candidate runs, and surprising results.
-5. **Record.** Update the appropriate artifact layer with provenance and
-   interpretation.
-6. **Decide.** Choose the next experiment, promote a durable decision, or stop
-   when the campaign no longer has a useful next test.
-
-## Result Triage
-
-Treat runs differently by purpose:
-
-- **Calibration-only:** use for debugging, sizing, smoke tests, or threshold
-  setting. Do not promote as an official result unless the project or human says
-  to.
-- **Infrastructure failure:** record only enough to avoid repeating the failure.
-  Do not interpret scientific meaning from a broken setup.
-- **Official candidate:** record commit, config, parameters, run directory,
-  metrics, and comparison to the current best or stage gate.
-- **Surprising result:** preserve the setup and observed behavior even if it is
-  not a new best. Surprises often become the next campaign.
-
-## Logging Shape
-
-A useful experiment entry answers:
-
-1. Hypothesis.
-2. Setup: commit, config, parameters, data, and runner command when relevant.
-3. Result: metrics and run directory or report path.
-4. Interpretation: what changed in the research state.
-5. Surprises or failure notes.
-6. Next experiment IDs or stop condition.
-
-Prefer links or paths to bulky artifacts over pasted logs. Use the project's
-link style and path conventions.
-
-## Durable Decisions
-
-Promote a conclusion to durable KB or decision docs when it will guide future
-campaigns, not merely explain one run. Durable decisions include benchmark
-selection, official metric policy, accepted/rejected experimental mechanisms,
-and recurring failure modes with known fixes.
-
-Keep speculation in the campaign narrative until evidence makes it reusable.
-
-## Delegation
-
-When handing work to another agent or runner, include:
-
-- the hypothesis and stage gate,
-- exact files or directories to read,
-- the command or project runner entrypoint if known,
-- what counts as success, failure, or calibration,
-- where to write outputs,
-- what summary to return.
+## Delegation Rule
 
 Managers and leads coordinate. They should not silently become the experiment
 implementation worker unless the user explicitly asks for direct execution.
+
+When handing work to another agent or runner, include the loop state, research
+question, hypothesis or design branch, stage gate, exact files to read, expected
+command or entrypoint if known, output location, and what summary should come
+back.

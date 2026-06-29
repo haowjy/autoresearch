@@ -1,11 +1,15 @@
 [package]
 name = "autoresearch"
 version = "0.1.0"
-description = "Agents and skills for coordinating autonomous research campaigns: hypotheses, experiment routing, result triage, and durable research artifacts."
+description = "Agents and skills for coordinating AI research loops: research dialogue, experiment design, run supervision, result triage, and durable research artifacts."
 
 [dependencies.meridian-base]
 url = "https://github.com/haowjy/meridian-base"
 version = ">=0.7.0, <0.8.0"
+
+[dependencies.meridian-dev-workflow]
+url = "https://github.com/haowjy/meridian-dev-workflow"
+version = ">=0.11.0, <0.12.0"
 
 [settings]
 targets = [

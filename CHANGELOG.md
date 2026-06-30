@@ -4,6 +4,8 @@ Format: Keep a Changelog. Versioning: SemVer.
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-06-30
+
 - Clarify that planning is human-in-the-loop while approved goal execution is autonomous, with preflight sniff tests, memory checkpoints, and gated reviewers.
 - Clarify that `autoresearch-lead` owns the user-facing, evidence-grounded design-tree walk for requirements and scope.
 - Require execution handoffs to include a runner handoff plus a separate user-pasteable goal block.

@@ -1,6 +1,6 @@
 [package]
 name = "autoresearch"
-version = "0.1.0"
+version = "0.1.1"
 description = "Agents and skills for coordinating AI research loops: evidence-grounded dialogue, experiment design, run supervision, result triage, and durable research memory."
 
 [dependencies.meridian-base]

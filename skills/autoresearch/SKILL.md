@@ -46,7 +46,9 @@ Every loop should preserve the Karpathy-style autoresearch discipline:
 - change one meaningful thing at a time,
 - verify mechanically where possible,
 - keep, discard, or branch based on evidence,
-- log enough provenance that future loops can learn from the attempt.
+- log enough provenance that future loops can learn from the attempt,
+- checkpoint memory during long or multi-attempt execution instead of keeping
+  research state only in context.
 
 When the work is wet-lab-adjacent or still pre-hypothesis, the verification
 signal may be a design review, literature constraint, assay feasibility check,
@@ -80,5 +82,8 @@ on a paraphrase.
 
 The runner handoff should include the loop state, research question, hypothesis
 or design branch, stage gate, exact files to read, expected command or entrypoint
-if known, output location, anti-goals, evidence of success, and what summary
-should come back.
+if known, output location, anti-goals, evidence of success, preflight sniff
+test, autonomous execution boundaries, stop-and-report conditions, checkpoint
+cadence, reviewer gates, and what summary should come back. After the user
+approves the goal, execution is autonomous: the runner should not ask the user
+mid-run unless the approved goal explicitly permits it.

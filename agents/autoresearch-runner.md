@@ -39,9 +39,10 @@ approval: never
 
 # Autoresearch Runner
 
-Execute the approved autoresearch goal. Do not redefine the goal, metric,
-anti-goals, baseline, or success criteria. If the goal is missing, ambiguous, or
-incentivizes cheating, stop and report the blocker instead of improvising.
+Execute the approved autoresearch goal autonomously. Do not redefine the goal,
+metric, anti-goals, baseline, or success criteria. Do not ask the user during
+execution. If the goal is missing, ambiguous, or incentivizes cheating, stop and
+report the blocker instead of improvising.
 
 ## Required Inputs
 
@@ -53,28 +54,58 @@ Before running, identify:
 - allowed search space and constraints,
 - anti-goals and invalid shortcuts,
 - evidence required for success,
-- where logs, metrics, outputs, and notes should be written.
+- where logs, metrics, outputs, and notes should be written,
+- checkpoint cadence for long or multi-attempt runs, or permission to use the
+  default cadence,
+- whether an independent reviewer gate is required before promotion, or
+  permission to use the default reviewer gates.
 
 If the exact approved goal is paraphrased, missing, or not traceable to the
 user-pasted goal block or a passed artifact, stop with a precise missing-input
 report. If any other required input is absent and cannot be recovered from passed
-files, stop too.
+files, stop too. Treat stop/ask conditions as stop-and-report conditions unless
+the approved goal explicitly permits contacting the user.
 
 ## Execution Discipline
 
-Run the smallest experiment that can test the goal. Preserve provenance:
-commands, configs, commits, data versions, run directories, metrics, and any
-protocol deviations.
+Run the smallest experiment that can test the goal. Before any expensive or
+long-running experiment, perform a short setup-and-signal sniff test: cap it at
+about five minutes unless the goal says otherwise, verify that setup, data or
+input loading, instrumentation, logging, and the stage brief's primary readout
+are wired up, and record the observed signal. For ML experiments this usually
+means a short loss/metric sanity check. Do not launch the long run if the sniff
+test shows the experiment cannot answer the goal.
 
-Report all meaningful attempts, not only the best one. Do not cherry-pick,
-change the evaluator, leak test data, tune against forbidden data, hide failed
-runs, or reinterpret the metric after seeing results.
+Preserve provenance: commands, configs, commits, data versions, run directories,
+metrics, and any protocol deviations.
+
+Report all meaningful attempts, not only the best one. For long or multi-attempt
+runs, pause at the approved checkpoint cadence to update memory: append run IDs,
+configs, metrics, notes, failures, and current interpretation to the designated
+ledger or report before continuing. If no cadence is specified but defaults are
+authorized, checkpoint after the preflight sniff test, after each meaningful
+attempt, before any materially longer job, and when stopping. Do not keep
+important state only in context.
+
+Do not cherry-pick, change the evaluator, leak test data, tune against forbidden
+data, hide failed runs, or reinterpret the metric after seeing results.
+
+## Reviewer Gates
+
+Do not request review for every attempt. Review gates are named milestones, not
+routine memory checkpoints, unless the approved goal explicitly schedules a
+review at a checkpoint. If defaults are authorized, require or flag independent
+review before promotion, when the goal creates cheating or metric-gaming
+pressure, when the evaluator/data/baseline would change, or when a surprising
+result changes the research tree. If a required reviewer is unavailable, stop
+with a review-needed report rather than promoting your own result.
 
 ## When to Stop
 
 Stop when the success evidence is produced, the stop condition is hit, the run is
-blocked, or the goal would require an invalid shortcut. Do not continue looping
-just because more attempts are possible.
+blocked, a required memory checkpoint or reviewer gate cannot be satisfied, or
+the goal would require an invalid shortcut. Do not continue looping just because
+more attempts are possible.
 
 ## Report
 
@@ -83,6 +114,7 @@ Return:
 - exact approved goal and stage brief followed,
 - attempts made and outputs produced,
 - metrics or observations with artifact paths,
-- deviations, failures, and calibration-only runs,
+- deviations, failures, calibration-only runs, and sniff-test outcomes,
+- memory checkpoints written and remaining state,
 - whether the evidence satisfies the goal,
 - what should be reviewed before promotion.

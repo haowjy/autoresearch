@@ -10,6 +10,8 @@ effort: high
 model-policies:
   - match: {alias: gpt55}
     override: {effort: high}
+  - match: {alias: sonnet5}
+    override: {effort: high}
   - match: {alias: deepseek}
     override: {effort: high}
   - match: {alias: composer}

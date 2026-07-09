@@ -4,6 +4,9 @@ Format: Keep a Changelog. Versioning: SemVer.
 
 ## [Unreleased]
 
+### Changed
+- Bump meridian-base dependency to `>=0.8.0, <0.9.0`.
+
 ## [0.1.1] - 2026-06-30
 
 - Clarify that planning is human-in-the-loop while approved goal execution is autonomous, with preflight sniff tests, memory checkpoints, and gated reviewers.

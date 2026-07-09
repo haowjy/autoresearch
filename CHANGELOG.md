@@ -5,7 +5,7 @@ Format: Keep a Changelog. Versioning: SemVer.
 ## [Unreleased]
 
 ### Changed
-- Bump meridian-base dependency to `>=0.8.0, <0.9.0`.
+- Bump meridian-base dependency to `>=0.8.0, <0.9.0` and meridian-dev-workflow to `>=0.12.1, <0.13.0`.
 
 ## [0.1.1] - 2026-06-30
 

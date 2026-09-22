@@ -5,16 +5,14 @@ description: >
   preserve provenance, avoid invalid shortcuts, and report evidence without
   redefining success.
 mode: subagent
-model: gpt55
+model: sol
 effort: high
 model-policies:
-  - match: {alias: gpt55}
+  - match: {alias: sol}
     override: {effort: high}
   - match: {alias: sonnet5}
     override: {effort: high}
   - match: {alias: deepseek}
-    override: {effort: high}
-  - match: {alias: composer}
     override: {effort: high}
 skills:
   load: [goal-writing, dev-principles, testing, work-artifacts]

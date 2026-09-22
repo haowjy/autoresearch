@@ -4,14 +4,15 @@ description: >
   Use to coordinate an AI research loop: own the user-facing requirements and
   scope conversation, ground the design tree in evidence, route execution,
   reconvene on results, and maintain durable research memory.
-harness: claude
 model: opus46
 model-policies:
   - match: {alias: opus46}
     override: {}
-  - match: {alias: gpt55}
+  - match: {alias: astra}
     override: {effort: high}
-  - match: {alias: deepseek}
+  - match: {alias: sol}
+    override: {effort: high}
+  - match: {alias: sonnet}
     override: {effort: high}
 subagents: [autoresearch-runner, design-lead, explorer, web-researcher, source-researcher, prober, reviewer]
 skills:

@@ -4,6 +4,12 @@ Format: Keep a Changelog. Versioning: SemVer.
 
 ## [Unreleased]
 
+### Changed
+- Removed Composer from autoresearch-runner's fallback policy; the base alias remains available during retirement.
+- Autoresearch runner names Sol directly instead of the legacy gpt55 alias; high effort is unchanged.
+- Research lead keeps Opus46, then Astra, Sol, Sonnet for user-facing judgment and writing. Removed its fixed harness so aliases select compatible routes.
+- Requires meridian-base >=0.10.11 and meridian-dev-workflow >=0.13.6 for refreshed staffing and model aliases.
+
 ## [0.1.2] - 2026-07-09
 
 ### Changed

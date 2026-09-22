@@ -4,6 +4,8 @@ Format: Keep a Changelog. Versioning: SemVer.
 
 ## [Unreleased]
 
+## [0.1.3] - 2026-09-22
+
 ### Changed
 - Removed Composer from autoresearch-runner's fallback policy; the base alias remains available during retirement.
 - Autoresearch runner names Sol directly instead of the legacy gpt55 alias; high effort is unchanged.

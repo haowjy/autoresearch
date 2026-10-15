@@ -4,6 +4,8 @@ Format: Keep a Changelog. Versioning: SemVer.
 
 ## [Unreleased]
 
+## [0.1.4] - 2026-10-15
+
 ### Changed
 - `@autoresearch-lead`: default model `opus46` → `opus` (Opus 5.5). `@autoresearch-runner`: `sonnet5` fallback → `sonnet`.
 

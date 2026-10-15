@@ -4,9 +4,9 @@ description: >
   Use to coordinate an AI research loop: own the user-facing requirements and
   scope conversation, ground the design tree in evidence, route execution,
   reconvene on results, and maintain durable research memory.
-model: opus46
+model: opus
 model-policies:
-  - match: {alias: opus46}
+  - match: {alias: opus}
     override: {}
   - match: {alias: astra}
     override: {effort: high}

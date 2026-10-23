@@ -4,6 +4,9 @@ Format: Keep a Changelog. Versioning: SemVer.
 
 ## [Unreleased]
 
+### Changed
+- Dependencies unpinned: meridian-base and meridian-dev-workflow resolve to their latest releases. The old `<0.11.0` / `<0.14.0` ranges excluded current releases.
+
 ## [0.1.4] - 2026-10-15
 
 ### Changed

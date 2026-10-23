@@ -4,6 +4,9 @@ Format: Keep a Changelog. Versioning: SemVer.
 
 ## [Unreleased]
 
+### Changed
+- Dependencies pinned to the current minors: meridian-base `>=0.11.0, <0.12.0`, meridian-dev-workflow `>=0.15.0, <0.16.0`. 0.1.5 left them unpinned.
+
 ## [0.1.5] - 2026-10-23
 
 ### Changed

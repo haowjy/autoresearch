@@ -4,6 +4,9 @@ Format: Keep a Changelog. Versioning: SemVer.
 
 ## [Unreleased]
 
+### Changed
+- Requires Meridian >=0.14.0 and Mars >=0.18.0 for portable network policies.
+
 ## [0.1.7] - 2026-10-25
 
 ### Changed

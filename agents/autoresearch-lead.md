@@ -20,7 +20,6 @@ skills:
   available: [session-mining]
 tools:
   bash: allow
-  'bash(meridian *)': allow
   write: allow
   edit: allow
   glob: allow

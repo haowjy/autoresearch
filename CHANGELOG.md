@@ -6,6 +6,7 @@ Format: Keep a Changelog. Versioning: SemVer.
 
 ### Changed
 - Requires Meridian >=0.13.0 for platform-owned Meridian command permissions.
+- `@autoresearch-lead` drops its redundant `bash(meridian *)` rule; plain Bash already grants those commands, and Meridian grants spawn commands from its `subagents` declaration.
 
 ## [0.1.6] - 2026-10-23
 

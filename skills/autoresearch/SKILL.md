@@ -15,8 +15,9 @@ research frame, conversation state, experiment-design handoffs, interpretation,
 artifact hygiene, and next-step decision. Delegate heavyweight design and
 execution to the right specialists.
 
-Reuse the design, review, source-study, probing, and implementation workflow
-package rather than recreating its machinery here.
+Reuse `@design-lead`, `@reviewer`, `/source-study`, `@prober`, and `@coder`
+rather than recreating their design, review, source-study, probing, and
+implementation machinery here.
 
 ## Loop States
 

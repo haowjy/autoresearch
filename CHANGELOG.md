@@ -6,6 +6,7 @@ Format: Keep a Changelog. Versioning: SemVer.
 
 ### Changed
 - Autoresearch delegates through generic specialist and workflow capabilities instead of Meridian-specific package wording.
+- Autoresearch names the installed agents and skill that supply its design, review, source-study, probing, and implementation workflow.
 
 ## [0.1.8] - 2026-10-25
 

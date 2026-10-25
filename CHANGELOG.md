@@ -4,6 +4,9 @@ Format: Keep a Changelog. Versioning: SemVer.
 
 ## [Unreleased]
 
+### Changed
+- Requires Meridian >=0.13.0 for platform-owned Meridian command permissions.
+
 ## [0.1.6] - 2026-10-23
 
 ### Changed

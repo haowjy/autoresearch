@@ -5,6 +5,7 @@ Format: Keep a Changelog. Versioning: SemVer.
 ## [Unreleased]
 
 ### Changed
+- Requires Meridian >=0.14.5 and accepts meridian-base 0.12, which moved Meridian's own skills into Meridian.
 - The research lead now relies on the runtime-supplied capability to read past
   sessions instead of naming a package skill.
 - Autoresearch delegates through generic specialist and workflow capabilities instead of Meridian-specific package wording.

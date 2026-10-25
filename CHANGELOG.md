@@ -4,6 +4,8 @@ Format: Keep a Changelog. Versioning: SemVer.
 
 ## [Unreleased]
 
+## [0.1.8] - 2026-10-25
+
 ### Changed
 - Requires Meridian >=0.14.0 and Mars >=0.18.0 for portable network policies.
 - `@autoresearch-lead` runs `danger-full-access`, like the other leads: Meridian refuses a sandboxed caller any child less confined than itself, which blocked five of its declared subagents (autoresearch-runner, design-lead, source-researcher, prober, reviewer).

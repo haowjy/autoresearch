@@ -1,6 +1,6 @@
 [package]
 name = "autoresearch"
-version = "0.1.7"
+version = "0.1.8"
 description = "Agents and skills for coordinating AI research loops: evidence-grounded dialogue, experiment design, run supervision, result triage, and durable research memory."
 requires-mars = ">=0.18.0"
 requires-meridian = ">=0.14.0"

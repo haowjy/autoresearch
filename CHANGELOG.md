@@ -4,6 +4,9 @@ Format: Keep a Changelog. Versioning: SemVer.
 
 ## [Unreleased]
 
+### Changed
+- Autoresearch delegates through generic specialist and workflow capabilities instead of Meridian-specific package wording.
+
 ## [0.1.8] - 2026-10-25
 
 ### Changed

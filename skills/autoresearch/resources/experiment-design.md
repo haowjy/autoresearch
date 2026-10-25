@@ -16,7 +16,7 @@ credible path.
 
 Spawn `@design-lead` when the next experiment has nontrivial alternatives,
 unclear boundaries, meaningful cost, feasibility risk, data/benchmark choices,
-or downstream decisions that depend on the design. Reuse the Meridian design
+or downstream decisions that depend on the design. Reuse the design-lead
 workflow instead of rebuilding it inside autoresearch.
 
 A good `@design-lead` handoff includes:

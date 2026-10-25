@@ -13,11 +13,10 @@ model-invocable: true
 Use this skill to coordinate AI research as a disciplined loop. Own the
 research frame, conversation state, experiment-design handoffs, interpretation,
 artifact hygiene, and next-step decision. Delegate heavyweight design and
-execution to the right Meridian specialists.
+execution to the right specialists.
 
-This package is ecosystem-native: reuse `meridian-dev-workflow` rather than
-recreating its design, review, source-study, probing, and implementation
-machinery.
+Reuse the design, review, source-study, probing, and implementation workflow
+package rather than recreating its machinery here.
 
 ## Loop States
 

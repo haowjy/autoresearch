@@ -6,6 +6,7 @@ Format: Keep a Changelog. Versioning: SemVer.
 
 ### Changed
 - Requires Meridian >=0.14.0 and Mars >=0.18.0 for portable network policies.
+- `@autoresearch-lead` explicitly keeps shell network access under its workspace sandbox.
 
 ## [0.1.7] - 2026-10-25
 

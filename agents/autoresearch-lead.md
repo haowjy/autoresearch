@@ -31,6 +31,7 @@ tools:
   'bash(git stash:*)': deny
   notebook: deny
 sandbox: workspace-write
+network: allow
 ---
 
 # Autoresearch Lead

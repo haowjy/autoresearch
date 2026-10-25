@@ -17,7 +17,6 @@ model-policies:
 subagents: [autoresearch-runner, design-lead, explorer, web-researcher, source-researcher, prober, reviewer]
 skills:
   load: [autoresearch, goal-writing, grill-with-evidence, intent-modeling, llm-writing]
-  available: [session-mining]
 tools:
   bash: allow
   write: allow

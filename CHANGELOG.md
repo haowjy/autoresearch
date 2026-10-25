@@ -5,6 +5,8 @@ Format: Keep a Changelog. Versioning: SemVer.
 ## [Unreleased]
 
 ### Changed
+- The research lead now relies on the runtime-supplied capability to read past
+  sessions instead of naming a package skill.
 - Autoresearch delegates through generic specialist and workflow capabilities instead of Meridian-specific package wording.
 - Autoresearch names the installed agents and skill that supply its design, review, source-study, probing, and implementation workflow.
 
